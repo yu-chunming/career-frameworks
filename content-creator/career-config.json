@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "name": "content-creator-framework",
+    "version": "1.0.0",
+    "career": "自媒体工作者",
+    "description": "自媒体工作者框架，完全独立，含记忆备份机制",
+    "independent": true
+  },
+  
+  "skills": [
+    {"id": "writer", "priority": 5, "source": "clawhub", "install_command": "openclaw skill install writer"},
+    {"id": "summarize", "priority": 4, "source": "clawhub", "install_command": "openclaw skill install summarize"},
+    {"id": "python", "priority": 4, "source": "clawhub", "install_command": "openclaw skill install python"},
+    {"id": "frontend-design", "priority": 3, "source": "anthropic", "install_command": "openclaw skill install frontend-design"}
+  ],
+
+  "cron_tasks": [
+    {
+      "name": "daily-memory-backup",
+      "schedule": "0 0 * * *",
+      "timezone": "Asia/Shanghai",
+      "action": "每日24点记忆备份与进化报告",
+      "enabled": true
+    },
+    {
+      "name": "weekly-memory-review",
+      "schedule": "0 20 * * 0",
+      "timezone": "Asia/Shanghai",
+      "action": "每周记忆回顾",
+      "enabled": true
+    }
+  ],
+
+  "memory_system": {
+    "layers": {
+      "L1": "会话临时",
+      "L2": "memory/YYYY-MM-DD.md",
+      "L3": "MEMORY.md"
+    }
+  }
+}

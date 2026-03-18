@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "name": "product-manager-framework",
+    "version": "1.0.0",
+    "career": "产品经理",
+    "independent": true
+  },
+  
+  "skills": [
+    {"id": "frontend-design", "priority": 5, "source": "anthropic", "install_command": "openclaw skill install frontend-design"},
+    {"id": "python", "priority": 4, "source": "clawhub", "install_command": "openclaw skill install python"},
+    {"id": "writer", "priority": 4, "source": "clawhub", "install_command": "openclaw skill install writer"},
+    {"id": "summarize", "priority": 3, "source": "clawhub", "install_command": "openclaw skill install summarize"}
+  ],
+
+  "cron_tasks": [
+    {"name": "daily-memory-backup", "schedule": "0 0 * * *", "timezone": "Asia/Shanghai", "action": "每日记忆备份", "enabled": true},
+    {"name": "weekly-memory-review", "schedule": "0 20 * * 0", "timezone": "Asia/Shanghai", "action": "每周记忆回顾", "enabled": true}
+  ],
+
+  "memory_system": {
+    "layers": {"L1": "会话临时", "L2": "memory/YYYY-MM-DD.md", "L3": "MEMORY.md"}
+  }
+}

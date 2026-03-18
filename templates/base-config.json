@@ -1,0 +1,103 @@
+{
+  "meta": {
+    "name": "career-framework-template",
+    "version": "1.0.0",
+    "career": "【职业名称】",
+    "description": "【职业描述】",
+    "created": "【创建日期】",
+    "author": "【作者】"
+  },
+  
+  "career_profile": {
+    "role": "【角色名称】",
+    "core_competencies": [
+      "能力1",
+      "能力2",
+      "能力3",
+      "能力4",
+      "能力5"
+    ],
+    "focus_areas": {
+      "area-1": {
+        "name": "领域1名称",
+        "skills": ["技能1", "技能2"],
+        "priority": 1
+      },
+      "area-2": {
+        "name": "领域2名称",
+        "skills": ["技能1", "技能2"],
+        "priority": 2
+      }
+    }
+  },
+
+  "skills": [
+    {
+      "id": "skill-id",
+      "name": "技能名称",
+      "category": "技能类别",
+      "priority": 5,
+      "daily_time_minutes": 30,
+      "source": "clawhub|local|builtin|anthropic",
+      "description": "技能描述",
+      "learning_path": [
+        "学习路径1",
+        "学习路径2",
+        "学习路径3"
+      ]
+    }
+  ],
+
+  "learning_schedule": {
+    "daily_learning_hours": 2,
+    "time_slots": {
+      "morning": {
+        "time": "08:00-10:00",
+        "focus": ["技能1", "技能2"],
+        "intensity": "high"
+      },
+      "afternoon": {
+        "time": "14:00-17:00",
+        "focus": ["技能3"],
+        "intensity": "moderate"
+      },
+      "evening": {
+        "time": "20:00-22:00",
+        "focus": ["技能4"],
+        "intensity": "low"
+      }
+    },
+    "weekly_rotation": {
+      "monday": "主题1",
+      "tuesday": "主题2",
+      "wednesday": "主题3",
+      "thursday": "主题4",
+      "friday": "主题5",
+      "saturday": "实践",
+      "sunday": "回顾"
+    }
+  },
+
+  "cron_tasks": [
+    {
+      "name": "task-name",
+      "schedule": "cron表达式",
+      "timezone": "Asia/Shanghai",
+      "action": "任务描述",
+      "enabled": true
+    }
+  ],
+
+  "workflows": {
+    "workflow-name": {
+      "name": "流程名称",
+      "steps": ["步骤1", "步骤2", "步骤3"],
+      "output_format": "markdown"
+    }
+  },
+
+  "personalization": {
+    "custom_field_1": "value1",
+    "custom_field_2": "value2"
+  }
+}

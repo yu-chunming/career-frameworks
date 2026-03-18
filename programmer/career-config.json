@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "name": "programmer-framework",
+    "version": "1.0.0",
+    "career": "程序员",
+    "description": "程序员职业学习框架，完全独立，含记忆备份机制",
+    "created": "2026-03-18",
+    "author": "Claw",
+    "independent": true
+  },
+  
+  "career_profile": {
+    "role": "软件开发工程师",
+    "core_competencies": ["代码质量", "测试能力", "调试能力", "架构设计", "安全意识"]
+  },
+
+  "skills": [
+    {
+      "id": "code-review",
+      "name": "代码审查",
+      "priority": 5,
+      "daily_time_minutes": 30,
+      "source": "clawhub",
+      "install_command": "openclaw skill install code-review"
+    },
+    {
+      "id": "refactor-safely",
+      "name": "安全重构",
+      "priority": 5,
+      "daily_time_minutes": 20,
+      "source": "clawhub",
+      "install_command": "openclaw skill install refactor-safely"
+    },
+    {
+      "id": "testing-patterns",
+      "name": "测试模式",
+      "priority": 4,
+      "daily_time_minutes": 20,
+      "source": "clawhub",
+      "install_command": "openclaw skill install testing-patterns"
+    },
+    {
+      "id": "security-audit",
+      "name": "安全审计",
+      "priority": 4,
+      "daily_time_minutes": 15,
+      "source": "clawhub",
+      "install_command": "openclaw skill install security-audit"
+    },
+    {
+      "id": "python",
+      "name": "Python最佳实践",
+      "priority": 4,
+      "daily_time_minutes": 15,
+      "source": "clawhub",
+      "install_command": "openclaw skill install python"
+    },
+    {
+      "id": "vue-best-practices",
+      "name": "Vue最佳实践",
+      "priority": 3,
+      "daily_time_minutes": 15,
+      "source": "clawhub",
+      "install_command": "openclaw skill install vue-best-practices"
+    }
+  ],
+
+  "learning_schedule": {
+    "daily_learning_hours": 2,
+    "time_slots": {
+      "morning": {"time": "08:00-10:00", "focus": ["code-review"], "intensity": "high"},
+      "midday": {"time": "10:00-12:00", "focus": ["coding"], "intensity": "high"},
+      "afternoon": {"time": "14:00-17:00", "focus": ["testing"], "intensity": "moderate"},
+      "evening": {"time": "20:00-22:00", "focus": ["new-tech"], "intensity": "low"}
+    }
+  },
+
+  "cron_tasks": [
+    {
+      "name": "daily-memory-backup",
+      "schedule": "0 0 * * *",
+      "timezone": "Asia/Shanghai",
+      "action": "每日24点：回顾会话、提取信息、总结习惯、判断固化技能、生成进化报告",
+      "enabled": true
+    },
+    {
+      "name": "weekly-memory-review",
+      "schedule": "0 20 * * 0",
+      "timezone": "Asia/Shanghai",
+      "action": "每周日20点：回顾本周记忆、更新长期记忆、清理过时信息",
+      "enabled": true
+    },
+    {
+      "name": "skill-learning",
+      "schedule": "0 9,15,21 * * *",
+      "timezone": "Asia/Shanghai",
+      "action": "按时段学习技能",
+      "enabled": true
+    }
+  ],
+
+  "memory_system": {
+    "layers": {
+      "L1": {"name": "工作记忆", "storage": "会话临时"},
+      "L2": {"name": "短期记忆", "storage": "memory/YYYY-MM-DD.md"},
+      "L3": {"name": "长期记忆", "storage": "MEMORY.md"}
+    },
+    "solidify_rules": {
+      "min_usage": 3,
+      "must_be_generic": true,
+      "must_be_standardizable": true
+    }
+  },
+
+  "personalization": {
+    "tech_stack": ["Python", "TypeScript"],
+    "code_style": "google",
+    "learning_intensity": "moderate"
+  }
+}

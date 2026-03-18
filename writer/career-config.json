@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "name": "writer-framework",
+    "version": "1.0.0",
+    "career": "文字工作者",
+    "description": "文字工作者职业学习框架，完全独立，含记忆备份机制",
+    "created": "2026-03-18",
+    "author": "Claw",
+    "independent": true
+  },
+  
+  "career_profile": {
+    "role": "文字内容创作者",
+    "core_competencies": ["写作技巧", "内容优化", "编辑校对", "效率工具"]
+  },
+
+  "skills": [
+    {
+      "id": "writer",
+      "name": "写作优化",
+      "priority": 5,
+      "daily_time_minutes": 30,
+      "source": "clawhub",
+      "install_command": "openclaw skill install writer"
+    },
+    {
+      "id": "summarize",
+      "name": "内容摘要",
+      "priority": 4,
+      "daily_time_minutes": 15,
+      "source": "clawhub",
+      "install_command": "openclaw skill install summarize"
+    },
+    {
+      "id": "python",
+      "name": "Python自动化",
+      "priority": 3,
+      "daily_time_minutes": 15,
+      "source": "clawhub",
+      "install_command": "openclaw skill install python"
+    }
+  ],
+
+  "learning_schedule": {
+    "daily_learning_hours": 2
+  },
+
+  "cron_tasks": [
+    {
+      "name": "daily-memory-backup",
+      "schedule": "0 0 * * *",
+      "timezone": "Asia/Shanghai",
+      "action": "每日24点：回顾会话、提取信息、总结习惯、判断固化技能、生成进化报告",
+      "enabled": true
+    },
+    {
+      "name": "weekly-memory-review",
+      "schedule": "0 20 * * 0",
+      "timezone": "Asia/Shanghai",
+      "action": "每周日20点：回顾本周记忆、更新长期记忆",
+      "enabled": true
+    }
+  ],
+
+  "memory_system": {
+    "layers": {
+      "L1": {"name": "工作记忆", "storage": "会话临时"},
+      "L2": {"name": "短期记忆", "storage": "memory/YYYY-MM-DD.md"},
+      "L3": {"name": "长期记忆", "storage": "MEMORY.md"}
+    },
+    "solidify_rules": {
+      "min_usage": 3,
+      "must_be_generic": true
+    }
+  },
+
+  "personalization": {
+    "writing_types": ["article", "blog"],
+    "daily_word_goal": 2000
+  }
+}
